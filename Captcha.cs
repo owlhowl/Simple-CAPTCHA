@@ -12,14 +12,14 @@ public class CaptchaBuilder
     Graphics g;
     Brush fontBrush;
 
-    public CaptchaBuilder(int width, int height)
+    public CaptchaBuilder(int width, int height, string fontFamily, FontStyle fontStyle)
     {
         text = new StringBuilder();
         random = new Random();
         bmp = new Bitmap(width, height);
         g = Graphics.FromImage(bmp);
         fontSize = height / 2;
-        font = new Font("Consolas", fontSize, FontStyle.Bold);
+        font = new Font(fontFamily, fontSize, fontStyle);
         fontBrush = new SolidBrush(Color.FromArgb(128, Color.Black));
     }
 

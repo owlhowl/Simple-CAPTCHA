@@ -1,6 +1,6 @@
 ﻿using System.Drawing.Imaging;
 
-var cb = new CaptchaBuilder(200, 100);
+var cb = new CaptchaBuilder(200, 100, "Consolas", System.Drawing.FontStyle.Bold);
 var dir = "captcha-test";
 
 foreach (var file in Directory.EnumerateFiles(dir))
